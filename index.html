@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yojana Mitra - Find Government Schemes You Qualify For</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+        }
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 1.1em;
+        }
+        .form-section {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 25px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            font-weight: 600;
+            color: #444;
+            margin-bottom: 8px;
+            font-size: 0.95em;
+        }
+        select, input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 1em;
+            transition: border-color 0.3s;
+        }
+        select:focus, input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        .checkbox-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+            background: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            border: 2px solid #e0e0e0;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .checkbox-item:hover {
+            border-color: #667eea;
+        }
+        .checkbox-item input {
+            width: auto;
+            margin-right: 8px;
+        }
+        .btn {
+            width: 100%;
+            padding: 18px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 1.2em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+        }
+        .results {
+            margin-top: 30px;
+        }
+        .result-count {
+            text-align: center;
+            font-size: 1.3em;
+            color: #333;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        .scheme-card {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-left: 5px solid #667eea;
+            transition: transform 0.3s;
+        }
+        .scheme-card:hover {
+            transform: translateX(5px);
+            background: #f0f2f5;
+        }
+        .scheme-name {
+            font-size: 1.4em;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 5px;
+        }
+        .scheme-fullname {
+            color: #666;
+            font-size: 0.95em;
+            margin-bottom: 15px;
+        }
+        .scheme-benefit {
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+            color: white;
+            padding: 12px 18px;
+            border-radius: 10px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+        .scheme-section {
+            margin-bottom: 15px;
+        }
+        .scheme-section-title {
+            font-weight: 600;
+            color: #444;
+            margin-bottom: 8px;
+            font-size: 0.95em;
+        }
+        .documents-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .document-tag {
+            background: #667eea;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.85em;
+        }
+        .apply-btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 12px 25px;
+            background: #333;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+        .apply-btn:hover {
+            background: #555;
+        }
+        .no-results {
+            text-align: center;
+            padding: 40px;
+            color: #666;
+            font-size: 1.1em;
+        }
+        .loading {
+            text-align: center;
+            padding: 40px;
+            font-size: 1.2em;
+            color: #667eea;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+            h1 {
+                font-size: 1.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🇮🇳 Yojana Mitra</h1>
+        <p class="subtitle">Find government schemes you qualify for. No middlemen. Direct application.</p>
+        
+        <div class="form-section">
+            <div class="form-group">
+                <label>Which state are you from?</label>
+                <select id="state">
+                    <option value="">Select your state</option>
+                    <option value="all">All India (Central Schemes)</option>
+                    <option value="andhraPradesh">Andhra Pradesh</option>
+                    <option value="assam">Assam</option>
+                    <option value="bihar">Bihar</option>
+                    <option value="chhattisgarh">Chhattisgarh</option>
+                    <option value="goa">Goa</option>
+                    <option value="gujarat">Gujarat</option>
+                    <option value="himachalPradesh">Himachal Pradesh</option>
+                    <option value="jharkhand">Jharkhand</option>
+                    <option value="karnataka">Karnataka</option>
+                    <option value="kerala">Kerala</option>
+                    <option value="maharashtra">Maharashtra</option>
+                    <option value="manipur">Manipur</option>
+                    <option value="meghalaya">Meghalaya</option>
+                    <option value="odisha">Odisha</option>
+                    <option value="punjab">Punjab</option>
+                    <option value="rajasthan">Rajasthan</option>
+                    <option value="tamilNadu">Tamil Nadu</option>
+                    <option value="telangana">Telangana</option>
+                    <option value="uttarPradesh">Uttar Pradesh</option>
+                    <option value="uttarakhand">Uttarakhand</option>
+                    <option value="westBengal">West Bengal</option>
+                    <option value="other">Other State</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>What is your primary occupation?</label>
+                <select id="occupation">
+                    <option value="">Select occupation</option>
+                    <option value="farmer">Farmer / Agriculture</option>
+                    <option value="business">Business Owner / Entrepreneur</option>
+                    <option value="startup">Startup Founder</option>
+                    <option value="selfEmployed">Self-Employed / Freelancer</option>
+                    <option value="streetVendor">Street Vendor / Hawker</option>
+                    <option value="foodProcessing">Food Processing</option>
+                    <option value="dairy">Dairy / Livestock</option>
+                    <option value="fisherman">Fisherman / Aquaculture</option>
+                    <option value="unorganizedWorker">Unorganized Worker (Construction, Domestic, etc.)</option>
+                    <option value="governmentEmployee">Government Employee</option>
+                    <option value="privateEmployee">Private Employee</option>
+                    <option value="student">Student</option>
+                    <option value="homemaker">Homemaker</option>
+                    <option value="any">Other / Not Listed</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Your annual household income (approximate)</label>
+                <select id="income">
+                    <option value="">Select income range</option>
+                    <option value="below2lakh">Below ₹2 lakh</option>
+                    <option value="2to5lakh">₹2-5 lakh</option>
+                    <option value="5to8lakh">₹5-8 lakh</option>
+                    <option value="8to12lakh">₹8-12 lakh</option>
+                    <option value="12to20lakh">₹12-20 lakh</option>
+                    <option value="above20lakh">Above ₹20 lakh</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Your age</label>
+                <input type="number" id="age" placeholder="Enter your age" min="16" max="100">
+            </div>
+
+            <div class="form-group">
+                <label>Gender</label>
+                <select id="gender">
+                    <option value="">Select gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Which category do you belong to?</label>
+                <select id="category">
+                    <option value="">Select category</option>
+                    <option value="general">General</option>
+                    <option value="sc">Scheduled Caste (SC)</option>
+                    <option value="st">Scheduled Tribe (ST)</option>
+                    <option value="obc">Other Backward Classes (OBC)</option>
+                    <option value="ews">Economically Weaker Section (EWS)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Do you have any of the following? (Check all that apply)</label>
+                <div class="checkbox-group">
+                    <label class="checkbox-item">
+                        <input type="checkbox" id="hasAadhaar" checked>
+                        Aadhaar Card
+                    </label>
+                    <label class="checkbox-item">
+                        <input type="checkbox" id="hasBankAccount" checked>
+                        Bank Account
+                    </label>
+                    <label class="checkbox-item">
+                        <input type="checkbox" id="hasRationCard">
+                        Ration Card (BPL/AAY)
+                    </label>
+                    <label class="checkbox-item">
+                        <input type="checkbox" id="hasLand">
+                        Agricultural Land
+                    </label>
+                    <label class="checkbox-item">
+                        <input type="checkbox" id="isMigrant">
+                        Migrant Worker
+                    </label>
+                    <label class="checkbox-item">
+                        <input type="checkbox" id="hasBusiness">
+                        Existing Business
+                    </label>
+                    <label class="checkbox-item">
+                        <input type="checkbox" id="isDPIIT">
+                        DPIIT-Recognized Startup
+                    </label>
+                    <label class="checkbox-item">
+                        <input type="checkbox" id="hasFPO">
+                        FPO / Cooperative Member
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Are you looking for schemes related to:</label>
+                <select id="interest">
+                    <option value="">Select your priority</option>
+                    <option value="finance">Business Finance / Loan</option>
+                    <option value="insurance">Insurance / Social Security</option>
+                    <option value="housing">Housing</option>
+                    <option value="health">Health / Medical</option>
+                    <option value="agriculture">Agriculture / Farming</option>
+                    <option value="education">Education / Girl Child</option>
+                    <option value="any">Any / Show me everything</option>
+                </select>
+            </div>
+
+            <button class="btn" onclick="findSchemes()">🔍 Find Schemes I Qualify For</button>
+        </div>
+
+        <div id="results" class="results"></div>
+    </div>
+
+    <script>
+        let schemesData = null;
+
+        // Load schemes data
+        fetch('schemes.json')
+            .then(res => res.json())
+            .then(data => {
+                schemesData = data.schemes;
+            })
+            .catch(err => {
+                console.error('Failed to load schemes:', err);
+                // Fallback data
+                schemesData = [];
+            });
+
+        function findSchemes() {
+            const resultsDiv = document.getElementById('results');
+            resultsDiv.innerHTML = '<div class="loading">⏳ Analyzing your eligibility...</div>';
+
+            // Get form values
+            const userProfile = {
+                state: document.getElementById('state').value,
+                occupation: document.getElementById('occupation').value,
+                income: document.getElementById('income').value,
+                age: parseInt(document.getElementById('age').value) || 0,
+                gender: document.getElementById('gender').value,
+                category: document.getElementById('category').value,
+                hasAadhaar: document.getElementById('hasAadhaar').checked,
+                hasBankAccount: document.getElementById('hasBankAccount').checked,
+                hasRationCard: document.getElementById('hasRationCard').checked,
+                hasLand: document.getElementById('hasLand').checked,
+                isMigrant: document.getElementById('isMigrant').checked,
+                hasBusiness: document.getElementById('hasBusiness').checked,
+                isDPIIT: document.getElementById('isDPIIT').checked,
+                hasFPO: document.getElementById('hasFPO').checked,
+                interest: document.getElementById('interest').value
+            };
+
+            // Simulate processing delay for UX
+            setTimeout(() => {
+                const matched = matchSchemes(userProfile);
+                displayResults(matched);
+            }, 1500);
+        }
+
+        function matchSchemes(user) {
+            if (!schemesData) return [];
+
+            return schemesData.filter(scheme => {
+                const e = scheme.eligibility;
+
+                // Check state - scheme must match user's state or be 'all'
+                if (scheme.state && scheme.state !== 'all') {
+                    if (user.state !== scheme.state && user.state !== 'all') {
+                        return false;
+                    }
+                }
+
+                // Check occupation
+                if (e.occupation && !e.occupation.includes('any')) {
+                    if (!e.occupation.includes(user.occupation) && user.occupation !== 'any') {
+                        return false;
+                    }
+                }
+
+                // Check income
+                if (e.maxAnnualIncome) {
+                    const incomeMap = {
+                        'below2lakh': 200000,
+                        '2to5lakh': 500000,
+                        '5to8lakh': 800000,
+                        '8to12lakh': 1200000,
+                        '12to20lakh': 2000000,
+                        'above20lakh': 999999999
+                    };
+                    if (incomeMap[user.income] > e.maxAnnualIncome) {
+                        return false;
+                    }
+                }
+
+                // Check age
+                if (e.minAge && user.age < e.minAge) return false;
+                if (e.maxAge && user.age > e.maxAge) return false;
+
+                // Check gender
+                if (e.gender && !e.gender.includes(user.gender)) {
+                    if (!(e.gender.includes('sc') && user.category === 'sc')) {
+                        if (!(e.gender.includes('st') && user.category === 'st')) {
+                            return false;
+                        }
+                    }
+                }
+
+                // Check economic category
+                if (e.economicCategory) {
+                    const isEligible = e.economicCategory.some(cat => {
+                        if (cat === 'bpl' && user.hasRationCard) return true;
+                        if (cat === 'ews' && user.category === 'ews') return true;
+                        if (cat === 'poor' && (user.hasRationCard || user.income === 'below2lakh')) return true;
+                        if (cat === 'malnourished') return true; // Assume eligible
+                        return false;
+                    });
+                    if (!isEligible && e.economicCategory.length > 0) return false;
+                }
+
+                // Check exclusions
+                if (e.exclusions) {
+                    if (e.exclusions.includes('governmentEmployee') && user.occupation === 'governmentEmployee') return false;
+                    if (e.exclusions.includes('incomeTaxPayer') && user.income === 'above20lakh') return false;
+                }
+
+                // Check land requirement
+                if (e.landRequirement && !user.hasLand) return false;
+
+                // Check bank account requirement
+                if (e.hasBankAccount && !user.hasBankAccount) return false;
+
+                // Check DPIIT recognition
+                if (e.dpiitRecognized && !user.isDPIIT) return false;
+
+                // Interest filter
+                if (user.interest && user.interest !== 'any') {
+                    const keywords = {
+                        'finance': ['loan', 'fund', 'subsidy', 'credit'],
+                        'insurance': ['insurance', 'pension', 'security'],
+                        'housing': ['housing', 'awas'],
+                        'health': ['health', 'medical', 'arogya'],
+                        'agriculture': ['farmer', 'kisan', 'agriculture', 'dairy', 'fisheries'],
+                        'education': ['education', 'samriddhi', 'girl']
+                    };
+                    const interestWords = keywords[user.interest] || [];
+                    const schemeText = (scheme.name + ' ' + scheme.fullName + ' ' + scheme.benefit).toLowerCase();
+                    if (!interestWords.some(w => schemeText.includes(w))) {
+                        return false;
+                    }
+                }
+
+                return true;
+            }).sort((a, b) => {
+                // Sort by relevance (simplistic)
+                if (user.interest !== 'any') {
+                    const keywords = {
+                        'finance': ['loan', 'fund'],
+                        'insurance': ['insurance'],
+                        'housing': ['housing'],
+                        'health': ['health'],
+                        'agriculture': ['farmer', 'kisan'],
+                        'education': ['education']
+                    };
+                    const kw = keywords[user.interest] || [];
+                    const aMatch = kw.some(w => (a.name + a.benefit).toLowerCase().includes(w));
+                    const bMatch = kw.some(w => (b.name + b.benefit).toLowerCase().includes(w));
+                    if (aMatch && !bMatch) return -1;
+                    if (!aMatch && bMatch) return 1;
+                }
+                return 0;
+            });
+        }
+
+        function displayResults(schemes) {
+            const resultsDiv = document.getElementById('results');
+
+            if (schemes.length === 0) {
+                resultsDiv.innerHTML = `
+                    <div class="no-results">
+                        😕 No matching schemes found with your current inputs.<br><br>
+                        Try changing your occupation or income range. <br>
+                        Many schemes are occupation-specific (farmers, business owners, etc.)
+                    </div>
+                `;
+                return;
+            }
+
+            let html = `<div class="result-count">🎉 You qualify for ${schemes.length} scheme${schemes.length > 1 ? 's' : ''}!</div>`;
+
+            schemes.forEach(scheme => {
+                html += `
+                    <div class="scheme-card">
+                        <div class="scheme-name">${scheme.name}</div>
+                        <div class="scheme-fullname">${scheme.fullName}</div>
+                        <div class="scheme-benefit">💰 ${scheme.benefit}</div>
+                        
+                        <div class="scheme-section">
+                            <div class="scheme-section-title">📋 Required Documents:</div>
+                            <div class="documents-list">
+                                ${scheme.documents.map(d => `<span class="document-tag">${d}</span>`).join('')}
+                            </div>
+                        </div>
+
+                        <a href="${scheme.applyUrl}" target="_blank" class="apply-btn">Apply Now →</a>
+                    </div>
+                `;
+            });
+
+            resultsDiv.innerHTML = html;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,864 @@
+{
+  "schemes": [
+    {
+      "id": "pm-kisan",
+      "name": "PM-KISAN",
+      "fullName": "Pradhan Mantri Kisan Samman Nidhi",
+      "eligibility": {"occupation": ["farmer", "agriculture"], "maxAnnualIncome": 2000000, "landRequirement": true, "exclusions": ["governmentEmployee", "pensioner", "incomeTaxPayer"]},
+      "benefit": "₹6,000/year in 3 installments",
+      "documents": ["Aadhaar", "Land Records", "Bank Passbook"],
+      "applyUrl": "https://pmkisan.gov.in",
+      "state": "all"
+    },
+    {
+      "id": "mudra-loan",
+      "name": "MUDRA Loan",
+      "fullName": "Pradhan Mantri Mudra Yojana",
+      "eligibility": {"occupation": ["business", "selfEmployed", "startup"], "maxLoanAmount": 1000000, "businessStage": ["new", "existing"]},
+      "benefit": "Loan up to ₹10 lakh without collateral",
+      "documents": ["Aadhaar", "PAN", "Business Plan", "Bank Statement"],
+      "applyUrl": "https://www.mudra.org.in",
+      "state": "all"
+    },
+    {
+      "id": "standup-india",
+      "name": "Stand-Up India",
+      "fullName": "Stand-Up India Scheme",
+      "eligibility": {"occupation": ["business", "entrepreneur"], "gender": ["female", "sc", "st"], "businessStage": ["new"], "minAge": 18, "maxAge": 55},
+      "benefit": "Loan ₹10 lakh - ₹1 crore for manufacturing/services",
+      "documents": ["Aadhaar", "PAN", "Caste Certificate", "Business Plan", "Project Report"],
+      "applyUrl": "https://www.standupmitra.in",
+      "state": "all"
+    },
+    {
+      "id": "pm-svanidhi",
+      "name": "PM SVANidhi",
+      "fullName": "Pradhan Mantri Street Vendor's Atmanirbhar Nidhi",
+      "eligibility": {"occupation": ["streetVendor", "hawker"], "location": "urban", "hasStreetVendingCertificate": true},
+      "benefit": "Working capital loan up to ₹10,000",
+      "documents": ["Aadhaar", "Street Vendor Certificate", "Bank Account"],
+      "applyUrl": "https://pmsvanidhi.mohua.gov.in",
+      "state": "all"
+    },
+    {
+      "id": "atal-pension",
+      "name": "APY",
+      "fullName": "Atal Pension Yojana",
+      "eligibility": {"occupation": ["any"], "minAge": 18, "maxAge": 40, "hasBankAccount": true},
+      "benefit": "Guaranteed pension ₹1,000-5,000/month after 60 years",
+      "documents": ["Aadhaar", "Bank Account", "Mobile Number"],
+      "applyUrl": "https://www.npscra.nsdl.co.in",
+      "state": "all"
+    },
+    {
+      "id": "pm-jeevan-jyoti",
+      "name": "PMJJBY",
+      "fullName": "Pradhan Mantri Jeevan Jyoti Bima Yojana",
+      "eligibility": {"occupation": ["any"], "minAge": 18, "maxAge": 50, "hasBankAccount": true},
+      "benefit": "Life insurance ₹2 lakh for ₹436/year",
+      "documents": ["Aadhaar", "Bank Account"],
+      "applyUrl": "https://www.jansuraksha.gov.in",
+      "state": "all"
+    },
+    {
+      "id": "pm-suraksha-bima",
+      "name": "PMSBY",
+      "fullName": "Pradhan Mantri Suraksha Bima Yojana",
+      "eligibility": {"occupation": ["any"], "minAge": 18, "maxAge": 70, "hasBankAccount": true},
+      "benefit": "Accident insurance ₹2 lakh for ₹20/year",
+      "documents": ["Aadhaar", "Bank Account"],
+      "applyUrl": "https://www.jansuraksha.gov.in",
+      "state": "all"
+    },
+    {
+      "id": "ayushman-bharat",
+      "name": "Ayushman Bharat",
+      "fullName": "Pradhan Mantri Jan Arogya Yojana",
+      "eligibility": {"occupation": ["any"], "ses": ["poor", "vulnerable"], "economicCategory": ["bpl", "economicallyWeaker"]},
+      "benefit": "Health insurance up to ₹5 lakh/year per family",
+      "documents": ["Aadhaar", "Ration Card", "SECC Data Verification"],
+      "applyUrl": "https://pmjay.gov.in",
+      "state": "all"
+    },
+    {
+      "id": "ujjwala-yojana",
+      "name": "PMUY",
+      "fullName": "Pradhan Mantri Ujjwala Yojana",
+      "eligibility": {"gender": ["female"], "economicCategory": ["bpl", "economicallyWeaker"], "hasNoLpgConnection": true},
+      "benefit": "Free LPG connection + first refill",
+      "documents": ["Aadhaar", "BPL Certificate", "Bank Account"],
+      "applyUrl": "https://www.pmuy.gov.in",
+      "state": "all"
+    },
+    {
+      "id": "sukanya-samriddhi",
+      "name": "SSY",
+      "fullName": "Sukanya Samriddhi Yojana",
+      "eligibility": {"genderOfChild": ["female"], "maxAgeOfChild": 10, "relationship": "parent"},
+      "benefit": "Savings scheme 8.2% interest for girl child education/marriage",
+      "documents": ["Girl Child Birth Certificate", "Parent ID", "Bank Account"],
+      "applyUrl": "https://www.nsiindia.gov.in",
+      "state": "all"
+    },
+    {
+      "id": "pm-awas-yojana",
+      "name": "PMAY",
+      "fullName": "Pradhan Mantri Awas Yojana",
+      "eligibility": {"occupation": ["any"], "economicCategory": ["ews", "lig", "mig"], "doesNotOwnPuccaHouse": true},
+      "benefit": "Housing subsidy up to ₹2.67 lakh",
+      "documents": ["Aadhaar", "Income Certificate", "Property Documents"],
+      "applyUrl": "https://pmaymis.gov.in",
+      "state": "all"
+    },
+    {
+      "id": "startup-india",
+      "name": "Startup India",
+      "fullName": "Startup India Scheme",
+      "eligibility": {"occupation": ["startup", "entrepreneur"], "companyAge": "< 10 years", "annualTurnover": "< 100 crore", "innovation": true},
+      "benefit": "Tax exemption, funding support, mentorship, self-certification",
+      "documents": ["Company Registration", "PAN", "Innovation Proof", "DPIIT Registration"],
+      "applyUrl": "https://www.startupindia.gov.in",
+      "state": "all"
+    },
+    {
+      "id": "sidbi-fund-of-funds",
+      "name": "FFS",
+      "fullName": "SIDBI Fund of Funds for Startups",
+      "eligibility": {"occupation": ["startup"], "dpiitRecognized": true, "sector": ["innovation", "technology"]},
+      "benefit": "Funding through SEBI-registered AIFs",
+      "documents": ["DPIIT Recognition", "Business Plan", "Financial Projections"],
+      "applyUrl": "https://www.sidbi.in",
+      "state": "all"
+    },
+    {
+      "id": "dairy-entrepreneurship",
+      "name": "DEDS",
+      "fullName": "Dairy Entrepreneurship Development Scheme",
+      "eligibility": {"occupation": ["farmer", "dairy", "entrepreneur"], "activity": ["milkProduction", "dairyProcessing"], "minAge": 18},
+      "benefit": "Subsidy up to 33.33% on dairy projects",
+      "documents": ["Aadhaar", "Land Records", "Bank Loan Sanction", "Project Report"],
+      "applyUrl": "https://www.nabard.org",
+      "state": "all"
+    },
+    {
+      "id": "pm-fme",
+      "name": "PMFME",
+      "fullName": "PM Formalisation of Micro Food Processing Enterprises",
+      "eligibility": {"occupation": ["foodProcessing", "microEnterprise"], "unorganizedSector": true, "existingBusiness": true},
+      "benefit": "Credit-linked subsidy 35% up to ₹10 lakh",
+      "documents": ["Aadhaar", "PAN", "Udyam Registration", "Bank Account"],
+      "applyUrl": "https://pmfme.mofpi.gov.in",
+      "state": "all"
+    },
+    {
+      "id": "agri-infra-fund",
+      "name": "AIF",
+      "fullName": "Agriculture Infrastructure Fund",
+      "eligibility": {"occupation": ["farmer", "farmerProducerOrg", "pacs", "marketingCoop"], "projectType": ["postHarvest", "communityFarming", "storage", "processing"]},
+      "benefit": "3% interest subvention + credit guarantee",
+      "documents": ["Aadhaar", "Land Records/FPO Registration", "Project Report", "Bank Account"],
+      "applyUrl": "https://agriinfra.nabard.org",
+      "state": "all"
+    },
+    {
+      "id": "fisheries-fidf",
+      "name": "FIDF",
+      "fullName": "Fisheries and Aquaculture Infrastructure Development Fund",
+      "eligibility": {"occupation": ["fisherman", "aquaculture", "fishProcessing"], "activity": ["fishProduction", "processing", "storage", "marketing"]},
+      "benefit": "Concessional finance for fisheries infrastructure",
+      "documents": ["Aadhaar", "Fisheries Department Registration", "Bank Account", "Project Report"],
+      "applyUrl": "https://dof.gov.in",
+      "state": "all"
+    },
+    {
+      "id": "e-shram",
+      "name": "e-SHRAM",
+      "fullName": "National Database for Unorganized Workers",
+      "eligibility": {"occupation": ["unorganizedWorker", "construction", "domestic", "streetVendor", "agriculture"], "age": "16-59", "notEpfEsic": true},
+      "benefit": "Universal Account Number, social security benefits, accident insurance",
+      "documents": ["Aadhaar", "Mobile Number", "Bank Account"],
+      "applyUrl": "https://eshram.gov.in",
+      "state": "all"
+    },
+    {
+      "id": "pm-vishwakarma",
+      "name": "PM Vishwakarma",
+      "fullName": "PM Vishwakarma Kaushal Samman Yojana",
+      "eligibility": {"occupation": ["artisan", "craftsman", "traditionalWorker"], "skills": ["carpentry", "blacksmith", "pottery", "weaving", "goldsmith", "sculpture"], "minAge": 18},
+      "benefit": "Skill upgradation + tool kit ₹15,000 + loan up to ₹3 lakh",
+      "documents": ["Aadhaar", "Skill Certificate/Community Proof", "Bank Account"],
+      "applyUrl": "https://pmvishwakarma.gov.in",
+      "state": "all"
+    },
+    {
+      "id": "nrlm-ajeevika",
+      "name": "NRLM",
+      "fullName": "National Rural Livelihood Mission (Ajeevika)",
+      "eligibility": {"gender": ["female"], "occupation": ["selfEmployed", "rural"], "economicCategory": ["bpl", "poor"], "rural": true},
+      "benefit": "Self-help group formation + interest-free loan + skill training",
+      "documents": ["Aadhaar", "BPL Card", "SHG Membership"],
+      "applyUrl": "https://nrlm.gov.in",
+      "state": "all"
+    },
+    {
+      "id": "pm-kusum",
+      "name": "PM-KUSUM",
+      "fullName": "Pradhan Mantri Kisan Urja Suraksha evam Utthaan Mahabhiyan",
+      "eligibility": {"occupation": ["farmer", "agriculture"], "landRequirement": true, "activity": ["solarIrrigation", "solarFencing"]},
+      "benefit": "Solar pump subsidy 60-90% + 30% loan",
+      "documents": ["Aadhaar", "Land Records", "Bank Account", "Electricity Bill"],
+      "applyUrl": "https://mnre.gov.in",
+      "state": "all"
+    },
+    {
+      "id": "pm-care",
+      "name": "PM CARES for Children",
+      "fullName": "PM CARES Scheme for Children",
+      "eligibility": {"relationship": "parentOrphaned", "parentsLostTo": ["covid"], "maxAge": 18},
+      "benefit": "₹10 lakh fixed deposit at 18 + ₹4,000/month stipend + education support",
+      "documents": ["Child Aadhaar", "Death Certificate", "Guardian Documents"],
+      "applyUrl": "https://pmcares.gov.in",
+      "state": "all"
+    },
+    {
+      "id": "rojgar-mela",
+      "name": "Rozgar Mela",
+      "fullName": "PM Rozgar Mela",
+      "eligibility": {"occupation": ["any"], "minAge": 18, "maxAge": 40, "education": ["10th", "12th", "graduate"]},
+      "benefit": "Government job appointment letters in various departments",
+      "documents": ["Aadhaar", "Education Certificates", "Photo"],
+      "applyUrl": "https://rozgarmela.gov.in",
+      "state": "all"
+    },
+    {
+      "id": "skill-india-digital",
+      "name": "Skill India Digital",
+      "fullName": "Skill India Digital Platform",
+      "eligibility": {"occupation": ["any"], "minAge": 15, "lookingFor": ["skillTraining", "employment"]},
+      "benefit": "Free online courses + certification + job placement assistance",
+      "documents": ["Aadhaar", "Mobile Number", "Basic Education"],
+      "applyUrl": "https://skillindiadigital.gov.in",
+      "state": "all"
+    },
+    {
+      "id": "tribe-education",
+      "name": "National Fellowship for ST",
+      "fullName": "National Fellowship Scheme for ST Students",
+      "eligibility": {"category": ["st"], "education": ["mPhil", "phd"]},
+      "benefit": "Fellowship ₹25,000-28,000/month + contingency grant",
+      "documents": ["ST Certificate", "University Enrollment", "Previous Marksheets"],
+      "applyUrl": "https://tribal.nic.in",
+      "state": "all"
+    },
+    {
+      "id": "pm-yasasvi",
+      "name": "PM YASASVI",
+      "fullName": "PM Young Achievers Scholarship Scheme",
+      "eligibility": {"category": ["obc", "ews"], "education": ["9th", "11th"], "maxFamilyIncome": 250000},
+      "benefit": "Scholarship ₹75,000-1,25,000 per year for OBC/EBC students",
+      "documents": ["Aadhaar", "Caste/Income Certificate", "School Certificate"],
+      "applyUrl": "https://yet.nta.nic.in",
+      "state": "all"
+    },
+    {
+      "id": "cm-relief-fund",
+      "name": "CM Relief Fund",
+      "fullName": "Chief Minister's Relief Fund",
+      "eligibility": {"occupation": ["any"], "medicalEmergency": true, "maxAnnualIncome": 500000, "bplPreferred": true},
+      "benefit": "Financial assistance ₹50,000-2,00,000 for medical treatment",
+      "documents": ["Aadhaar", "BPL Card", "Medical Report", "Hospital Estimate"],
+      "applyUrl": "State-specific CM Office",
+      "state": "state"
+    },
+    {
+      "id": "nrlm-lakhpati-didi",
+      "name": "Lakhpati Didi",
+      "fullName": "NRLM Lakhpati Didi Programme",
+      "eligibility": {"gender": ["female"], "occupation": ["selfEmployed", "rural", "shgMember"], "rural": true, "economicCategory": ["bpl", "poor"]},
+      "benefit": "Support to earn ₹1 lakh+ annually through SHG enterprises + skills training",
+      "documents": ["Aadhaar", "SHG Membership", "Bank Account"],
+      "applyUrl": "https://nrlm.gov.in",
+      "state": "all"
+    },
+    {
+      "id": "pm-matsya-sampada",
+      "name": "PMMSY",
+      "fullName": "Pradhan Mantri Matsya Sampada Yojana",
+      "eligibility": {"occupation": ["fisherman", "aquaculture", "fishProcessing"], "activity": ["fishProduction", "processing", "storage"]},
+      "benefit": "Subsidy 40-60% for fisheries infrastructure and equipment",
+      "documents": ["Aadhaar", "Fisheries Department Registration", "Bank Account", "Project Report"],
+      "applyUrl": "https://pmmsy.gov.in",
+      "state": "all"
+    },
+    {
+      "id": "national-bamboo-mission",
+      "name": "NBM",
+      "fullName": "National Bamboo Mission",
+      "eligibility": {"occupation": ["farmer", "entrepreneur", "bambooArtisan"], "activity": ["bambooCultivation", "bambooProcessing", "bambooProducts"]},
+      "benefit": "Subsidy up to 50% for bamboo plantation, processing units, and equipment",
+      "documents": ["Aadhaar", "Land Records", "Bank Account", "Project Report"],
+      "applyUrl": "https://nbm.gov.in",
+      "state": "all"
+    },
+    {
+      "id": "sfurti",
+      "name": "SFURTI",
+      "fullName": "Scheme of Fund for Regeneration of Traditional Industries",
+      "eligibility": {"occupation": ["artisan", "traditionalWorker", "clusterMember"], "sector": ["khadi", "villageIndustries", "handicrafts", "coir"]},
+      "benefit": "Support for cluster development, equipment, marketing for traditional industries",
+      "documents": ["Aadhaar", "Artisan Card", "Bank Account", "Cluster Membership"],
+      "applyUrl": "https://sfurti.msme.gov.in",
+      "state": "all"
+    },
+    {
+      "id": "odop",
+      "name": "ODOP",
+      "fullName": "One District One Product Scheme",
+      "eligibility": {"occupation": ["business", "entrepreneur", "artisan"], "sector": "districtSpecificProduct", "businessStage": ["new", "existing"]},
+      "benefit": "Marketing support, infrastructure, credit linkage for district-specific products",
+      "documents": ["Aadhaar", "Business Registration", "Bank Account", "Product Details"],
+      "applyUrl": "https://odop.msme.gov.in",
+      "state": "all"
+    },
+    {
+      "id": "msme-design",
+      "name": "Design Clinic",
+      "fullName": "MSME Design Clinic Scheme",
+      "eligibility": {"occupation": ["business", "startup", "msme"], "sector": ["manufacturing", "design"], "businessStage": ["existing"]},
+      "benefit": "75% subsidy up to ₹3 lakh for design projects + professional design support",
+      "documents": ["Aadhaar", "Udyam Registration", "Bank Account", "Design Proposal"],
+      "applyUrl": "https://dc.msme.gov.in",
+      "state": "all"
+    },
+    {
+      "id": "msme-iqtool",
+      "name": "QMS/QTT",
+      "fullName": "MSME Quality Management & Quality Technology Tools",
+      "eligibility": {"occupation": ["business", "msme"], "businessStage": ["existing"], "qualityImprovement": true},
+      "benefit": "75% subsidy for implementing quality standards, certifications, tools",
+      "documents": ["Aadhaar", "Udyam Registration", "Bank Account", "Quality Improvement Plan"],
+      "applyUrl": "https://qim.msme.gov.in",
+      "state": "all"
+    },
+    {
+      "id": "marketing-assistance",
+      "name": "Marketing Assistance",
+      "fullName": "MSME Marketing Assistance Scheme",
+      "eligibility": {"occupation": ["business", "msme"], "lookingFor": ["marketing", "export", "branding"]},
+      "benefit": "Reimbursement for marketing activities, exhibitions, catalogues, Bar Code registration",
+      "documents": ["Aadhaar", "Udyam Registration", "Bank Account", "Marketing Proposal"],
+      "applyUrl": "https://mas.msme.gov.in",
+      "state": "all"
+    },
+    {
+      "id": "incubation-scheme",
+      "name": "MSME Incubation",
+      "fullName": "MSME Incubation Scheme for Innovators",
+      "eligibility": {"occupation": ["innovator", "student", "entrepreneur"], "businessStage": ["idea", "prototype"], "innovation": true},
+      "benefit": "Financial support ₹5-15 lakh for proof of concept + incubation support",
+      "documents": ["Aadhaar", "Innovation Proposal", "Bank Account", "Educational Certificate"],
+      "applyUrl": "https://incubation.msme.gov.in",
+      "state": "all"
+    },
+    {
+      "id": "women-entrepreneur",
+      "name": "Mahila Udyam Nidhi",
+      "fullName": "Mahila Udyam Nidhi Scheme",
+      "eligibility": {"gender": ["female"], "occupation": ["business", "entrepreneur", "selfEmployed"], "businessStage": ["new", "existing"]},
+      "benefit": "Loan up to ₹10 lakh at concessional rates for women entrepreneurs",
+      "documents": ["Aadhaar", "PAN", "Business Plan", "Bank Account"],
+      "applyUrl": "https://www.pnbindia.in",
+      "state": "all"
+    },
+    {
+      "id": "stree-shakti",
+      "name": "Stree Shakti",
+      "fullName": "Stree Shakti Package for Women Entrepreneurs",
+      "eligibility": {"gender": ["female"], "occupation": ["business", "entrepreneur"], "enrolledInEdp": true},
+      "benefit": "Concession in interest rate (0.5%) + no processing fee for women in EDPs",
+      "documents": ["Aadhaar", "EDP Certificate", "Bank Account", "Business Proof"],
+      "applyUrl": "SBI and participating banks",
+      "state": "all"
+    },
+    {
+      "id": "oriental-bank-women",
+      "name": "Oriented Mahila Vikas",
+      "fullName": "OBC Mahila Vikas Yojana",
+      "eligibility": {"gender": ["female"], "occupation": ["business", "entrepreneur"], "businessStage": ["new", "existing"]},
+      "benefit": "Loan up to ₹5 crore for women entrepreneurs with flexible terms",
+      "documents": ["Aadhaar", "PAN", "Business Registration", "Bank Account"],
+      "applyUrl": "https://www.pnbindia.in",
+      "state": "all"
+    },
+    {
+      "id": "karnataka-anna-bhagya",
+      "name": "Anna Bhagya",
+      "fullName": "Karnataka Anna Bhagya Scheme",
+      "eligibility": {"occupation": ["any"], "state": "karnataka", "hasRationCard": true, "economicCategory": ["bpl", "priorityHousehold"]},
+      "benefit": "Free rice 5kg per person + ₹500 cash per month",
+      "documents": ["Aadhaar", "Ration Card", "Karnataka Residence Proof"],
+      "applyUrl": "https://ahara.kar.nic.in",
+      "state": "karnataka"
+    },
+    {
+      "id": "karnataka-gruha-lakshmi",
+      "name": "Gruha Lakshmi",
+      "fullName": "Karnataka Gruha Lakshmi Scheme",
+      "eligibility": {"gender": ["female"], "state": "karnataka", "occupation": ["any"], "headOfFamily": true, "maxAnnualIncome": 2000000},
+      "benefit": "₹2,000/month to female head of family",
+      "documents": ["Aadhaar", "Ration Card", "Bank Account", "Karnataka Residence Proof"],
+      "applyUrl": "https://sevasindhu.karnataka.gov.in",
+      "state": "karnataka"
+    },
+    {
+      "id": "karnataka-yuva-nidhi",
+      "name": "Yuva Nidhi",
+      "fullName": "Karnataka Yuva Nidhi Scheme",
+      "eligibility": {"state": "karnataka", "education": ["graduate", "postgraduate"], "employmentStatus": ["unemployed"], "minAge": 18, "maxAge": 35},
+      "benefit": "₹3,000/month for graduates, ₹1,500 for diploma holders (unemployed)",
+      "documents": ["Aadhaar", "Degree Certificate", "Bank Account", "Karnataka Residence Proof"],
+      "applyUrl": "https://sevasindhu.karnataka.gov.in",
+      "state": "karnataka"
+    },
+    {
+      "id": "karnataka-shakti",
+      "name": "Shakti Scheme",
+      "fullName": "Karnataka Shakti Free Bus Travel",
+      "eligibility": {"gender": ["female"], "state": "karnataka", "occupation": ["any"]},
+      "benefit": "Free bus travel in Karnataka RTC buses for women",
+      "documents": ["Aadhaar", "Karnataka Residence Proof"],
+      "applyUrl": "Auto-enabled with Aadhaar",
+      "state": "karnataka"
+    },
+    {
+      "id": "maharashtra-mukhya-mantri",
+      "name": "Mukhyamantri Yojana",
+      "fullName": "Mukhyamantri Swayam Rojgar Yojana",
+      "eligibility": {"state": "maharashtra", "occupation": ["business", "entrepreneur", "selfEmployed"], "minAge": 18, "maxAge": 45},
+      "benefit": "Loan up to ₹25 lakh with 15-20% subsidy for MSMEs",
+      "documents": ["Aadhaar", "PAN", "Project Report", "Bank Account", "Maharashtra Residence Proof"],
+      "applyUrl": "https://mahaswayam.gov.in",
+      "state": "maharashtra"
+    },
+    {
+      "id": "maharashtra-magel-tyala",
+      "name": "Magel Tyala Shettale",
+      "fullName": "Maharashtra Farm Pond Scheme",
+      "eligibility": {"state": "maharashtra", "occupation": ["farmer", "agriculture"], "landRequirement": true},
+      "benefit": "Farm pond construction with 50% subsidy up to ₹75,000",
+      "documents": ["Aadhaar", "7/12 Extract", "Bank Account", "Maharashtra Residence Proof"],
+      "applyUrl": "https://mahaagri.gov.in",
+      "state": "maharashtra"
+    },
+    {
+      "id": "up-farmer-accident",
+      "name": "Krishak Durghatna Kalyan",
+      "fullName": "UP Krishak Durghatna Kalyan Yojana",
+      "eligibility": {"state": "uttarPradesh", "occupation": ["farmer", "agriculture"], "headOfFamily": true},
+      "benefit": "₹5 lakh compensation for accidental death of farmer head",
+      "documents": ["Aadhaar", "Death Certificate", "Land Records", "Bank Account"],
+      "applyUrl": "https://upagriculture.com",
+      "state": "uttarPradesh"
+    },
+    {
+      "id": "up-mukhyamantri-udyami",
+      "name": "Mukhyamantri Udyami Yojana",
+      "fullName": "UP Mukhyamantri Udyami Yojana",
+      "eligibility": {"state": "uttarPradesh", "category": ["sc", "st", "obc", "minority"], "occupation": ["business", "entrepreneur"], "minAge": 18, "maxAge": 40},
+      "benefit": "Loan up to ₹20 lakh with 25% subsidy for startups",
+      "documents": ["Aadhaar", "Caste Certificate", "Project Report", "Bank Account"],
+      "applyUrl": "https://udyami.up.gov.in",
+      "state": "uttarPradesh"
+    },
+    {
+      "id": "bihar-student-credit",
+      "name": "Student Credit Card",
+      "fullName": "Bihar Student Credit Card Scheme",
+      "eligibility": {"state": "bihar", "education": ["12th", "undergraduate", "postgraduate"], "minAge": 18, "maxAge": 28, "parentIncome": "< 800000"},
+      "benefit": "Education loan up to ₹4 lakh at 1% interest",
+      "documents": ["Aadhaar", "School/College Certificate", "Parent Income Certificate", "Bank Account"],
+      "applyUrl": "https://education.bihar.gov.in",
+      "state": "bihar"
+    },
+    {
+      "id": "bihar-mukhyamantri-stree",
+      "name": "Mukhyamantri Kanya Utthan",
+      "fullName": "Bihar Mukhyamantri Kanya Utthan Yojana",
+      "eligibility": {"state": "bihar", "gender": ["female"], "education": ["12th", "undergraduate"], "unmarried": true},
+      "benefit": "₹50,000 for 12th pass girls, additional amount for graduation",
+      "documents": ["Aadhaar", "12th Certificate", "Bank Account", "Bihar Residence Proof"],
+      "applyUrl": "https://ekalyan.bih.nic.in",
+      "state": "bihar"
+    },
+    {
+      "id": "rajasthan-indira-gandhi",
+      "name": "Indira Gandhi Gas Cylinder",
+      "fullName": "Rajasthan Indira Gandhi Gas Cylinder Yojana",
+      "eligibility": {"state": "rajasthan", "gender": ["female"], "economicCategory": ["bpl", "economicallyWeaker"]},
+      "benefit": "LPG cylinder at ₹500 (subsidized rate)",
+      "documents": ["Aadhaar", "BPL Card", "Bank Account", "Rajasthan Residence Proof"],
+      "applyUrl": "https://rajasthan.gov.in",
+      "state": "rajasthan"
+    },
+    {
+      "id": "rajasthan-chiranjeevi",
+      "name": "Chiranjeevi Health",
+      "fullName": "Rajasthan Chiranjeevi Health Insurance",
+      "eligibility": {"state": "rajasthan", "occupation": ["any"], "economicCategory": ["bpl", "economicallyWeaker", "smallFarmer"]},
+      "benefit": "Health insurance up to ₹10 lakh per family",
+      "documents": ["Aadhaar", "Jan Aadhaar Card", "BPL Card/SSY Card"],
+      "applyUrl": "https://rajasthan.gov.in",
+      "state": "rajasthan"
+    },
+    {
+      "id": "tamilnadu-amma-scooter",
+      "name": "Amma Two-Wheeler",
+      "fullName": "Tamil Nadu Amma Two-Wheeler Scheme",
+      "eligibility": {"state": "tamilNadu", "gender": ["female"], "employmentStatus": ["employed", "selfEmployed"], "minAge": 18, "maxAge": 45},
+      "benefit": "50% subsidy up to ₹25,000 for two-wheeler purchase",
+      "documents": ["Aadhaar", "Driving License", "Income Certificate", "Bank Account"],
+      "applyUrl": "https://www.tn.gov.in",
+      "state": "tamilNadu"
+    },
+    {
+      "id": "telangana-rythu-bandhu",
+      "name": "Rythu Bandhu",
+      "fullName": "Telangana Rythu Bandhu Scheme",
+      "eligibility": {"state": "telangana", "occupation": ["farmer", "agriculture"], "landRequirement": true},
+      "benefit": "₹10,000 per acre per year for crop investment (₹5,000 per season)",
+      "documents": ["Aadhaar", "Land Records (Pattadar Passbook)", "Bank Account"],
+      "applyUrl": "https://rythubandhu.telangana.gov.in",
+      "state": "telangana"
+    },
+    {
+      "id": "telangana-rythu-bima",
+      "name": "Rythu Bima",
+      "fullName": "Telangana Rythu Bima Scheme",
+      "eligibility": {"state": "telangana", "occupation": ["farmer", "agriculture"], "age": "18-60", "landRequirement": true},
+      "benefit": "₹5 lakh life insurance for farmer's family on accidental death",
+      "documents": ["Aadhaar", "Land Records", "Nominee Details"],
+      "applyUrl": "Auto-enrollment with land records",
+      "state": "telangana"
+    },
+    {
+      "id": "west-bengal-kanyashree",
+      "name": "Kanyashree Prakalpa",
+      "fullName": "West Bengal Kanyashree Prakalpa",
+      "eligibility": {"state": "westBengal", "gender": ["female"], "minAge": 13, "maxAge": 19, "education": ["8th", "9th", "10th", "11th", "12th"], "unmarried": true},
+      "benefit": "Annual scholarship ₹1,000 + one-time ₹25,000 at 18 for continuing education",
+      "documents": ["Aadhaar", "School Certificate", "Bank Account", "Unmarried Declaration"],
+      "applyUrl": "https://wdkanyashree.gov.in",
+      "state": "westBengal"
+    },
+    {
+      "id": "gujarat-mukhyamantri",
+      "name": "Mukhyamantri Amrutam",
+      "fullName": "Gujarat Mukhyamantri Amrutam Yojana",
+      "eligibility": {"state": "gujarat", "occupation": ["any"], "economicCategory": ["bpl", "economicallyWeaker"]},
+      "benefit": "Health insurance up to ₹3 lakh per family for catastrophic illness",
+      "documents": ["Aadhaar", "Income Certificate", "BPL Card", "Bank Account"],
+      "applyUrl": "https://www.magujarat.com",
+      "state": "gujarat"
+    },
+    {
+      "id": "odisha-kalia",
+      "name": "KALIA",
+      "fullName": "Odisha KALIA Scheme",
+      "eligibility": {"state": "odisha", "occupation": ["farmer", "agriculture", "landlessLabourer"], "economicCategory": ["smallFarmer", "marginalFarmer", "landless"]},
+      "benefit": "₹10,000 per family per year (₹5,000 x 2 seasons) + insurance + livelihood support",
+      "documents": ["Aadhaar", "Land Records (if farmer)", "Bank Account", "Odisha Residence Proof"],
+      "applyUrl": "https://kalia.odisha.gov.in",
+      "state": "odisha"
+    },
+    {
+      "id": "kerala-ksfe-pension",
+      "name": "KSFE Pravasi Pension",
+      "fullName": "Kerala KSFE Pravasi Pension Scheme",
+      "eligibility": {"state": "kerala", "occupation": ["nri", "returnedEmigrant"], "minAge": 18, "maxAge": 55},
+      "benefit": "Pension scheme for NRKs - contribute while working abroad, get pension in Kerala",
+      "documents": ["Aadhaar", "Passport", "Emigration Clearance", "Bank Account", "Kerala Residence Proof"],
+      "applyUrl": "https://www.ksfe.com",
+      "state": "kerala"
+    },
+    {
+      "id": "punjab-aashirwad",
+      "name": "Mukh Mantri Aashirwad",
+      "fullName": "Punjab Mukh Mantri Aashirwad Scheme",
+      "eligibility": {"state": "punjab", "gender": ["female"], "orphan": true, "maxAge": 21},
+      "benefit": "₹51,000 deposit for orphan girls at marriage/18 years",
+      "documents": ["Aadhaar", "Orphan Certificate", "Guardian Documents", "Bank Account"],
+      "applyUrl": "https://pb.gov.in",
+      "state": "punjab"
+    },
+    {
+      "id": "jharkhand-mukhyamantri-ladli",
+      "name": "Mukhyamantri Ladli Yojana",
+      "fullName": "Jharkhand Mukhyamantri Ladli Yojana",
+      "eligibility": {"state": "jharkhand", "gender": ["female"], "birthDate": "after 2019", "economicCategory": ["bpl", "economicallyWeaker"]},
+      "benefit": "₹30,000 fixed deposit for girl child born after Nov 2019",
+      "documents": ["Girl Child Birth Certificate", "Parent Aadhaar", "BPL Card", "Bank Account"],
+      "applyUrl": "https://jharss.nic.in",
+      "state": "jharkhand"
+    },
+    {
+      "id": "assam-orunodoi",
+      "name": "Orunodoi Scheme",
+      "fullName": "Assam Orunodoi Scheme",
+      "eligibility": {"state": "assam", "gender": ["female"], "headOfFamily": true, "economicCategory": ["bpl", "economicallyWeaker"]},
+      "benefit": "₹1,250/month to female head for nutrition and health",
+      "documents": ["Aadhaar", "Ration Card", "Bank Account", "Assam Residence Proof"],
+      "applyUrl": "https://orunodoi.in",
+      "state": "assam"
+    },
+    {
+      "id": "chhattisgarh-mahtari-dular",
+      "name": "Mahtari Dular Yojana",
+      "fullName": "Chhattisgarh Mahtari Dular Yojana",
+      "eligibility": {"state": "chhattisgarh", "occupation": ["any"], "economicCategory": ["bpl", "antyodaya"]},
+      "benefit": "Free education up to graduation + ₹500/month scholarship for children",
+      "documents": ["Aadhaar", "Ration Card", "School Certificate", "Bank Account"],
+      "applyUrl": "https://cgstate.gov.in",
+      "state": "chhattisgarh"
+    },
+    {
+      "id": "himachal-mukhya-mantri",
+      "name": "Mukhyamantri Swavalamban",
+      "fullName": "Himachal Pradesh Mukhyamantri Swavalamban Yojana",
+      "eligibility": {"state": "himachalPradesh", "occupation": ["business", "entrepreneur", "selfEmployed"], "minAge": 18, "maxAge": 45, "resident": true},
+      "benefit": "Loan up to ₹40 lakh with interest subsidy for self-employment",
+      "documents": ["Aadhaar", "Domicile Certificate", "Project Report", "Bank Account"],
+      "applyUrl": "https://himachal.gov.in",
+      "state": "himachalPradesh"
+    },
+    {
+      "id": "uttarakhand-teerth-purohit",
+      "name": "Teerth Purohit Samman",
+      "fullName": "Uttarakhand Teerth Purohit Samman Yojana",
+      "eligibility": {"state": "uttarakhand", "occupation": ["priest", "teerthPurohit", "panda"], "registered": true},
+      "benefit": "₹5,000/month pension for registered priests/pandas",
+      "documents": ["Aadhaar", "Registration Certificate", "Bank Account", "Uttarakhand Residence"],
+      "applyUrl": "https://uk.gov.in",
+      "state": "uttarakhand"
+    },
+    {
+      "id": "goa-millet",
+      "name": "Millet Mission",
+      "fullName": "Goa Millet Mission Scheme",
+      "eligibility": {"state": "goa", "occupation": ["farmer", "agriculture"], "cropType": ["millet", "coarseGrain"]},
+      "benefit": "₹2,000/quintal incentive for millet production + processing support",
+      "documents": ["Aadhaar", "Land Records", "Crop Declaration", "Bank Account"],
+      "applyUrl": "https://www.goa.gov.in",
+      "state": "goa"
+    },
+    {
+      "id": "manipur-startup",
+      "name": "Manipur Startup",
+      "fullName": "Manipur Startup Scheme",
+      "eligibility": {"state": "manipur", "occupation": ["startup", "entrepreneur"], "age": "18-45", "innovation": true},
+      "benefit": "Seed fund ₹10-25 lakh + incubation support for startups",
+      "documents": ["Aadhaar", "Startup Proposal", "Manipur Domicile", "Bank Account"],
+      "applyUrl": "https://manipur.gov.in",
+      "state": "manipur"
+    },
+    {
+      "id": "meghalaya-prime",
+      "name": "PRIME",
+      "fullName": "Meghalaya Programme for Innovation and Mentoring",
+      "eligibility": {"state": "meghalaya", "occupation": ["entrepreneur", "startup"], "sector": ["innovation", "technology", "agriculture", "tourism"]},
+      "benefit": "Funding ₹5-50 lakh + mentorship for innovative ideas",
+      "documents": ["Aadhaar", "Project Proposal", "Meghalaya Residence", "Bank Account"],
+      "applyUrl": "https://www.meghalaya.gov.in",
+      "state": "meghalaya"
+    },
+    {
+      "id": "seed-fund-scheme",
+      "name": "Seed Fund Scheme",
+      "fullName": "Startup India Seed Fund Scheme",
+      "eligibility": {"occupation": ["startup", "entrepreneur"], "dpiitRecognized": true, "businessStage": ["early", "validation"], "maxAge": 35},
+      "benefit": "Grant up to ₹50 lakh for proof of concept, prototype, product trials",
+      "documents": ["DPIIT Recognition", "Pitch Deck", "Financial Plan", "Bank Account"],
+      "applyUrl": "https://seedfund.startupindia.gov.in",
+      "state": "all"
+    },
+    {
+      "id": "chidiya-udan",
+      "name": "CHIRIVI UDAAN",
+      "fullName": "CHIRIVI UDAAN for Women Entrepreneurs",
+      "eligibility": {"gender": ["female"], "occupation": ["startup", "entrepreneur", "business"], "age": "18-45"},
+      "benefit": "Grant up to ₹25 lakh for women-led startups + mentorship",
+      "documents": ["Aadhaar", "Company Registration", "Business Plan", "Bank Account"],
+      "applyUrl": "https://www.startupindia.gov.in",
+      "state": "all"
+    },
+    {
+      "id": "aspire-scheme",
+      "name": "ASPIRE",
+      "fullName": "A Scheme for Promotion of Innovation, Rural Industries and Entrepreneurship",
+      "eligibility": {"occupation": ["startup", "entrepreneur", "agriculture"], "businessStage": ["new", "early"], "focus": ["rural", "agro"]},
+      "benefit": "Financial assistance up to ₹1 crore for agro-based startups",
+      "documents": ["Aadhaar", "Project Report", "Bank Account", "Land Documents (if applicable)"],
+      "applyUrl": "https://www.msme.gov.in",
+      "state": "all"
+    },
+    {
+      "id": "samarth-scheme",
+      "name": "SAMARTH",
+      "fullName": "Samarth - Social Innovation Sandbox",
+      "eligibility": {"occupation": ["startup", "socialEnterprise"], "businessStage": ["idea", "prototype"], "impact": ["social", "rural", "underprivileged"]},
+      "benefit": "Grant ₹5-30 lakh + incubation for social impact startups",
+      "documents": ["Aadhaar", "Impact Proposal", "Prototype Description", "Bank Account"],
+      "applyUrl": "https://samarth.meit.gov.in",
+      "state": "all"
+    },
+    {
+      "id": "nbfc-startup",
+      "name": "NBFC Startup Loans",
+      "fullName": "SIDBI-NBFC Co-lending for Startups",
+      "eligibility": {"occupation": ["startup"], "dpiitRecognized": true, "businessStage": ["early", "growth"]},
+      "benefit": "Collateral-free loans ₹10 lakh to ₹5 crore at concessional rates",
+      "documents": ["DPIIT Certificate", "Business Plan", "Financials", "Bank Account"],
+      "applyUrl": "https://www.sidbi.in",
+      "state": "all"
+    },
+    {
+      "id": "credit-guarantee",
+      "name": "CGTMSE",
+      "fullName": "Credit Guarantee Fund Trust for Micro and Small Enterprises",
+      "eligibility": {"occupation": ["business", "startup", "selfEmployed"], "businessStage": ["new", "existing"], "collateralFree": true},
+      "benefit": "Credit guarantee for loans up to ₹5 crore without collateral",
+      "documents": ["Aadhaar", "PAN", "Business Registration", "Bank Account"],
+      "applyUrl": "https://www.cgtmse.in",
+      "state": "all"
+    },
+    {
+      "id": "elevate-100",
+      "name": "Elevate 100",
+      "fullName": "Karnataka Elevate 100 Programme",
+      "eligibility": {"state": "karnataka", "occupation": ["startup"], "innovation": true, "businessStage": ["early", "growth"]},
+      "benefit": "Grant ₹10-50 lakh + mentorship + co-working space in Bangalore",
+      "documents": ["Aadhaar", "Company Registration", "Pitch Deck", "Karnataka Domicile"],
+      "applyUrl": "https://k-tech.karnataka.gov.in",
+      "state": "karnataka"
+    },
+    {
+      "id": "bhamashah-tech",
+      "name": "Bhamashah Techno Hub",
+      "fullName": "Rajasthan Bhamashah Techno Hub",
+      "eligibility": {"state": "rajasthan", "occupation": ["startup", "entrepreneur"], "age": "18-40", "innovation": true},
+      "benefit": "Seed fund up to ₹25 lakh + incubation + mentoring",
+      "documents": ["Aadhaar", "Project Proposal", "Rajasthan Domicile", "Bank Account"],
+      "applyUrl": "https://bhamashahtechnohub.rajasthan.gov.in",
+      "state": "rajasthan"
+    },
+    {
+      "id": "tsic-idea",
+      "name": "TSIC IDEA",
+      "fullName": "Telangana State Innovation Cell - IDEA Programme",
+      "eligibility": {"state": "telangana", "occupation": ["startup", "entrepreneur", "student"], "age": "18-35", "businessStage": ["idea", "prototype"]},
+      "benefit": "Grant ₹3-10 lakh for innovative ideas + incubation support",
+      "documents": ["Aadhaar", "Idea Proposal", "Telangana Residence", "Bank Account"],
+      "applyUrl": "https://tsic.telangana.gov.in",
+      "state": "telangana"
+    },
+    {
+      "id": "kerala-startup",
+      "name": "Kerala Startup Mission",
+      "fullName": "KSUM Idea Grant",
+      "eligibility": {"state": "kerala", "occupation": ["startup", "student", "entrepreneur"], "age": "18-35", "businessStage": ["idea", "early"]},
+      "benefit": "Grant ₹2-7 lakh for innovative ideas + mentorship",
+      "documents": ["Aadhaar", "Idea Pitch", "Kerala Residence", "Bank Account"],
+      "applyUrl": "https://startupmission.kerala.gov.in",
+      "state": "kerala"
+    },
+    {
+      "id": "andhra-pradesh-innovation",
+      "name": "AP Innovation",
+      "fullName": "Andhra Pradesh Innovation Society - Startup Grant",
+      "eligibility": {"state": "andhraPradesh", "occupation": ["startup", "entrepreneur"], "businessStage": ["early", "idea"], "innovation": true},
+      "benefit": "Seed funding ₹10-25 lakh + infrastructure support",
+      "documents": ["Aadhaar", "Business Plan", "AP Residence", "Bank Account"],
+      "applyUrl": "https://ap.gov.in",
+      "state": "andhraPradesh"
+    },
+    {
+      "id": "madhya-pradesh-startup",
+      "name": "MP Startup",
+      "fullName": "Madhya Pradesh Startup Policy Grant",
+      "eligibility": {"state": "madhyaPradesh", "occupation": ["startup", "entrepreneur"], "age": "18-40", "businessStage": ["idea", "early"]},
+      "benefit": "Grant ₹5-25 lakh + subsidized office space + mentorship",
+      "documents": ["Aadhaar", "Project Report", "MP Domicile", "Bank Account"],
+      "applyUrl": "https://mpstartupportal.mp.gov.in",
+      "state": "madhyaPradesh"
+    },
+    {
+      "id": "haryana-startup",
+      "name": "Haryana Startup",
+      "fullName": "Haryana Startup Policy - Innovation Grant",
+      "eligibility": {"state": "haryana", "occupation": ["startup", "entrepreneur"], "businessStage": ["early", "idea"], "innovation": true},
+      "benefit": "Grant up to ₹10 lakh for innovative ideas + incubation",
+      "documents": ["Aadhaar", "Idea Proposal", "Haryana Residence", "Bank Account"],
+      "applyUrl": "https://haryanastartup.in",
+      "state": "haryana"
+    },
+    {
+      "id": "delhi-startup",
+      "name": "Delhi Startup Policy",
+      "fullName": "Delhi Startup Policy 2023",
+      "eligibility": {"state": "delhi", "occupation": ["startup", "entrepreneur"], "businessStage": ["idea", "early", "growth"], "innovation": true},
+      "benefit": "Grant up to ₹50 lakh + subsidized co-working + mentorship",
+      "documents": ["Aadhaar", "DPIIT Recognition", "Business Plan", "Delhi Residence"],
+      "applyUrl": "https://industries.delhi.gov.in",
+      "state": "delhi"
+    },
+    {
+      "id": "puducherry-startup",
+      "name": "Puducherry Startup",
+      "fullName": "Puducherry Startup Policy",
+      "eligibility": {"state": "puducherry", "occupation": ["startup", "entrepreneur"], "businessStage": ["idea", "early"]},
+      "benefit": "Grant ₹5-15 lakh + incubation support for innovative startups",
+      "documents": ["Aadhaar", "Project Proposal", "Puducherry Residence", "Bank Account"],
+      "applyUrl": "https://py.gov.in",
+      "state": "puducherry"
+    },
+    {
+      "id": "goa-startup",
+      "name": "Goa Startup",
+      "fullName": "Goa Startup Policy",
+      "eligibility": {"state": "goa", "occupation": ["startup", "entrepreneur"], "businessStage": ["idea", "early", "growth"]},
+      "benefit": "Grant up to ₹20 lakh + subsidized office space + mentorship",
+      "documents": ["Aadhaar", "Business Plan", "Goa Residence", "Bank Account"],
+      "applyUrl": "https://www.goa.gov.in",
+      "state": "goa"
+    },
+    {
+      "id": "chhattisgarh-startup",
+      "name": "CG Startup",
+      "fullName": "Chhattisgarh Startup Policy",
+      "eligibility": {"state": "chhattisgarh", "occupation": ["startup", "entrepreneur"], "businessStage": ["idea", "early"], "innovation": true},
+      "benefit": "Grant ₹10-25 lakh + incubation + mentorship",
+      "documents": ["Aadhaar", "Project Proposal", "CG Domicile", "Bank Account"],
+      "applyUrl": "https://cgstate.gov.in",
+      "state": "chhattisgarh"
+    },
+    {
+      "id": "jharkhand-startup",
+      "name": "Jharkhand Startup",
+      "fullName": "Jharkhand Startup Policy",
+      "eligibility": {"state": "jharkhand", "occupation": ["startup", "entrepreneur"], "businessStage": ["idea", "early"]},
+      "benefit": "Grant ₹5-20 lakh + incubation support",
+      "documents": ["Aadhaar", "Business Plan", "Jharkhand Residence", "Bank Account"],
+      "applyUrl": "https://jharkhand.gov.in",
+      "state": "jharkhand"
+    },
+    {
+      "id": "uttarakhand-startup",
+      "name": "UK Startup",
+      "fullName": "Uttarakhand Startup Policy",
+      "eligibility": {"state": "uttarakhand", "occupation": ["startup", "entrepreneur"], "businessStage": ["idea", "early"], "innovation": true},
+      "benefit": "Grant ₹5-15 lakh + incubation + mentorship",
+      "documents": ["Aadhaar", "Project Report", "UK Domicile", "Bank Account"],
+      "applyUrl": "https://uk.gov.in",
+      "state": "uttarakhand"
+    }
+  ]
+}

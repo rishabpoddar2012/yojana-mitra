@@ -1,0 +1,14 @@
+{
+  "name": "yojana-mitra",
+  "version": "1.0.0",
+  "description": "Government Scheme Eligibility Scanner for India",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "vercel-build": "echo 'Build complete'"
+  },
+  "dependencies": {},
+  "engines": {
+    "node": ">=14"
+  }
+}
