@@ -7,14 +7,14 @@
       "use": "@vercel/node"
     }
   ],
-  "routes": [
+  "rewrites": [
     {
-      "src": "/schemes.json",
-      "dest": "/schemes.json"
+      "source": "/schemes.json",
+      "destination": "/schemes.json"
     },
     {
-      "src": "/(.*)",
-      "dest": "/server.js"
+      "source": "/(.*)",
+      "destination": "/server.js"
     }
   ],
   "headers": [
