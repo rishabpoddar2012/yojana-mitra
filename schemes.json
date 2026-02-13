@@ -1399,6 +1399,106 @@
       "documents": ["Aadhaar", "TB Diagnosis Report", "Bank Account"],
       "applyUrl": "https://nikshay.in",
       "state": "all"
+    },
+    {
+      "id": "poshan-abhiyaan",
+      "name": "Poshan Abhiyaan",
+      "fullName": "National Nutrition Mission",
+      "eligibility": {"occupation": ["any"], "targetGroup": ["pregnantWomen", "lactatingMothers", "childrenUnder6"], "anganwadi": true},
+      "benefit": "Supplementary nutrition, health checkups, nutrition counseling for women and children",
+      "documents": ["Aadhaar", "Mother-Child Protection Card", "Anganwadi Registration"],
+      "applyUrl": "https://poshanabhiyaan.gov.in",
+      "state": "all"
+    },
+    {
+      "id": "anemia-mukt-bharat",
+      "name": "AMB",
+      "fullName": "Anemia Mukt Bharat",
+      "eligibility": {"occupation": ["any"], "targetGroup": ["women", "children", "adolescents"], "anemiaRisk": true},
+      "benefit": "Free IFA supplements, deworming, screening for anemia in high-risk groups",
+      "documents": ["Aadhaar", "Age Proof", "Health Card"],
+      "applyUrl": "https://anemiamuktbharat.info",
+      "state": "all"
+    },
+    {
+      "id": "pradhan-mantri-matru",
+      "name": "PMMVY",
+      "fullName": "Pradhan Mantri Matru Vandana Yojana",
+      "eligibility": {"gender": ["female"], "pregnancy": true, "firstChild": true, "employmentStatus": ["unemployed", "informal"]},
+      "benefit": "₹5,000 cash incentive in 3 installments for first child (conditional on health checkups)",
+      "documents": ["Aadhaar", "Mother-Child Protection Card", "Bank Account", "Husband Aadhaar"],
+      "applyUrl": "https://pmmvy.wcd.gov.in",
+      "state": "all"
+    },
+    {
+      "id": "creche-scheme",
+      "name": "National Creche",
+      "fullName": "National Creche Scheme for Children of Working Mothers",
+      "eligibility": {"occupation": ["workingMother"], "childAge": "6months-6years", "employmentType": ["formal", "informal"]},
+      "benefit": "Free daycare facility with food, medical care, pre-school education for working mothers' children",
+      "documents": ["Aadhaar", "Child Birth Certificate", "Mother Employment Proof", "Income Certificate"],
+      "applyUrl": "https://wcd.nic.in",
+      "state": "all"
+    },
+    {
+      "id": "ujjawala",
+      "name": "Ujjawala",
+      "fullName": "Comprehensive Scheme for Prevention of Trafficking and Rescue",
+      "eligibility": {"gender": ["female"], "victimStatus": ["trafficked", "commercialSexualExploitation"], "rescue": true},
+      "benefit": "Shelter, food, clothing, counseling, legal aid, vocational training for rescued victims",
+      "documents": ["Rescue Certificate", "Police Report", "Age Proof"],
+      "applyUrl": "https://wcd.nic.in",
+      "state": "all"
+    },
+    {
+      "id": "swadhar-greh",
+      "name": "Swadhar Greh",
+      "fullName": "Scheme for Women in Difficult Circumstances",
+      "eligibility": {"gender": ["female"], "circumstances": ["destitute", "widow", "abandoned", "releasedPrisoner", "domesticViolence"]},
+      "benefit": "Shelter, food, clothing, counseling, legal aid, vocational training, financial assistance",
+      "documents": ["Aadhaar", "Circumstance Proof (Police/FIR/Death Cert)", "Income Certificate"],
+      "applyUrl": "https://wcd.nic.in",
+      "state": "all"
+    },
+    {
+      "id": "working-women-hostel",
+      "name": "Working Women Hostel",
+      "fullName": "Scheme for Working Women Hostels",
+      "eligibility": {"gender": ["female"], "occupation": ["employed", "selfEmployed", "student"], "location": "awayFromHometown"},
+      "benefit": "Safe and affordable hostel accommodation with food for working women",
+      "documents": ["Aadhaar", "Employment Certificate/Student ID", "Income Certificate"],
+      "applyUrl": "https://wcd.nic.in",
+      "state": "all"
+    },
+    {
+      "id": "widow-pension-ignoap",
+      "name": "IGNOAPS",
+      "fullName": "Indira Gandhi National Old Age Pension Scheme",
+      "eligibility": {"occupation": ["any"], "minAge": 60, "economicCategory": ["bpl"]},
+      "benefit": "₹200-500/month pension for senior citizens (BPL) - varies by state",
+      "documents": ["Aadhaar", "Age Proof", "BPL Card", "Bank Account"],
+      "applyUrl": "https://nsap.nic.in",
+      "state": "all"
+    },
+    {
+      "id": "disability-pension-igndps",
+      "name": "IGNDPS",
+      "fullName": "Indira Gandhi National Disability Pension Scheme",
+      "eligibility": {"disability": true, "minDisabilityPercent": 80, "economicCategory": ["bpl"], "minAge": 18},
+      "benefit": "₹300-500/month pension for severely disabled (BPL)",
+      "documents": ["Aadhaar", "Disability Certificate (80%+)", "BPL Card", "Bank Account"],
+      "applyUrl": "https://nsap.nic.in",
+      "state": "all"
+    },
+    {
+      "id": "widow-pension-ignwps",
+      "name": "IGNWPS",
+      "fullName": "Indira Gandhi National Widow Pension Scheme",
+      "eligibility": {"gender": ["female"], "widow": true, "age": "40-59", "economicCategory": ["bpl"]},
+      "benefit": "₹300-500/month pension for widows aged 40-59 years (BPL)",
+      "documents": ["Aadhaar", "Death Certificate", "BPL Card", "Bank Account", "Age Proof"],
+      "applyUrl": "https://nsap.nic.in",
+      "state": "all"
     }
   ]
 }
