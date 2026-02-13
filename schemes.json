@@ -1089,6 +1089,316 @@
       "documents": ["Aadhaar", "Land Records", "Bank Account", "Gujarat Residence"],
       "applyUrl": "https://gujarat.gov.in",
       "state": "gujarat"
+    },
+    {
+      "id": "pm-fasal-bima",
+      "name": "PMFBY",
+      "fullName": "Pradhan Mantri Fasal Bima Yojana",
+      "eligibility": {"occupation": ["farmer", "agriculture"], "cropType": ["foodCrops", "oilseeds", "annualCommercial"], "landRequirement": true},
+      "benefit": "Crop insurance - premium 1.5-5%, coverage for crop loss due to natural calamities",
+      "documents": ["Aadhaar", "Land Records", "Bank Account", "Sowing Certificate"],
+      "applyUrl": "https://pmfby.gov.in",
+      "state": "all"
+    },
+    {
+      "id": "paramparagat-krishi",
+      "name": "PKVY",
+      "fullName": "Paramparagat Krishi Vikas Yojana",
+      "eligibility": {"occupation": ["farmer", "agriculture"], "activity": ["organicFarming"], "clusterSize": "minimum50Farmers"},
+      "benefit": "₹50,000/hectare for 3 years for organic farming conversion + certification",
+      "documents": ["Aadhaar", "Land Records", "Bank Account", "Cluster Formation"],
+      "applyUrl": "https://pgsindia-ncof.gov.in",
+      "state": "all"
+    },
+    {
+      "id": "soil-health-card",
+      "name": "SHC",
+      "fullName": "Soil Health Card Scheme",
+      "eligibility": {"occupation": ["farmer", "agriculture"], "landRequirement": true},
+      "benefit": "Free soil testing + personalized fertilizer recommendations every 2 years",
+      "documents": ["Aadhaar", "Land Records"],
+      "applyUrl": "https://soilhealth.dac.gov.in",
+      "state": "all"
+    },
+    {
+      "id": "neem-coated-urea",
+      "name": "Neem Urea",
+      "fullName": "Neem Coated Urea Programme",
+      "eligibility": {"occupation": ["farmer", "agriculture"], "landRequirement": true},
+      "benefit": "Subsidized neem-coated urea at controlled prices (reduces diversion, improves efficiency)",
+      "documents": ["Aadhaar", "Land Records", "Farmer ID"],
+      "applyUrl": "Agricultural Input Dealers",
+      "state": "all"
+    },
+    {
+      "id": "mission-organic",
+      "name": "MOVCDNER",
+      "fullName": "Mission Organic Value Chain Development for North Eastern Region",
+      "eligibility": {"occupation": ["farmer", "agriculture"], "region": ["northEast"], "activity": ["organicFarming"]},
+      "benefit": "Full value chain support for organic products - seeds to market",
+      "documents": ["Aadhaar", "Land Records", "Bank Account"],
+      "applyUrl": "https://necdigital.nic.in",
+      "state": "all"
+    },
+    {
+      "id": "agri-clinic",
+      "name": "ACABC",
+      "fullName": "Agri-Clinic and Agri-Business Centres",
+      "eligibility": {"occupation": ["agricultureGraduate", "agricultureExpert"], "minAge": 22, "businessStage": ["new"]},
+      "benefit": "Loan up to ₹20 lakh at 12% interest subsidy for agri-consultancy business",
+      "documents": ["Aadhaar", "Degree Certificate", "Business Plan", "Bank Account"],
+      "applyUrl": "https://www.nabard.org",
+      "state": "all"
+    },
+    {
+      "id": "rainfed-area",
+      "name": "RAD",
+      "fullName": "Programme for Restoration of Rainfed Areas",
+      "eligibility": {"occupation": ["farmer", "agriculture"], "region": ["rainfedArea", "dryland"], "activity": ["watershed", "soilConservation"]},
+      "benefit": "Integrated watershed management support for rainfed farming",
+      "documents": ["Aadhaar", "Land Records", "Gram Panchayat Recommendation"],
+      "applyUrl": "https://www.nwdpra.gov.in",
+      "state": "all"
+    },
+    {
+      "id": "livestock-insurance",
+      "name": "LIS",
+      "fullName": "Livestock Insurance Scheme",
+      "eligibility": {"occupation": ["farmer", "livestockOwner"], "animals": ["cattle", "buffalo", "sheep", "goat", "pig", "camel"]},
+      "benefit": "Insurance coverage for livestock death - premium 50% subsidized",
+      "documents": ["Aadhaar", "Animal Tag Number", "Veterinary Certificate", "Bank Account"],
+      "applyUrl": "https://dadf.gov.in",
+      "state": "all"
+    },
+    {
+      "id": "pashu-kisan",
+      "name": "Pashu Kisan Credit Card",
+      "fullName": "Animal Husbandry Kisan Credit Card",
+      "eligibility": {"occupation": ["farmer", "livestockOwner"], "animals": ["cattle", "buffalo", "sheep", "goat", "poultry"]},
+      "benefit": "Working capital loan for feed, fodder, veterinary care based on animal count",
+      "documents": ["Aadhaar", "Bank Account", "Livestock Count Certificate"],
+      "applyUrl": "Participating Banks",
+      "state": "all"
+    },
+    {
+      "id": "gobar-dhan",
+      "name": "GOBAR-DHAN",
+      "fullName": "Galvanizing Organic Bio-Agro Resources",
+      "eligibility": {"occupation": ["farmer", "panchayat", "selfHelpGroup"], "activity": ["biogas", "organicManure"], "cattleCount": "minimum5"},
+      "benefit": "Support for biogas plants and organic manure units - up to ₹1.5 lakh",
+      "documents": ["Aadhaar", "Land Records", "Cattle Count Proof", "Bank Account"],
+      "applyUrl": "https://swachhbharatmission.gov.in",
+      "state": "all"
+    },
+    {
+      "id": "blue-revolution",
+      "name": "Blue Revolution",
+      "fullName": "Integrated Development and Management of Fisheries",
+      "eligibility": {"occupation": ["fisherman", "fishFarmer", "aquaculture"], "activity": ["fishProduction", "processing", "marketing"]},
+      "benefit": "Comprehensive support for fisheries - seed to market with 40-60% subsidy",
+      "documents": ["Aadhaar", "Fisheries Registration", "Bank Account", "Project Report"],
+      "applyUrl": "https://dof.gov.in",
+      "state": "all"
+    },
+    {
+      "id": "solar-pump-yojana",
+      "name": "Solar Pump Yojana",
+      "fullName": "KUSUM Component C - Solar Pump Individual",
+      "eligibility": {"occupation": ["farmer", "agriculture"], "hasElectricConnection": false, "landRequirement": true},
+      "benefit": "Solar pump installation with 60-70% subsidy + 30% bank loan",
+      "documents": ["Aadhaar", "Land Records", "Bank Account", "No Electricity Certificate"],
+      "applyUrl": "https://mnre.gov.in",
+      "state": "all"
+    },
+    {
+      "id": "sampada-scheme",
+      "name": "SAMPADA",
+      "fullName": "Scheme for Agro-Marine Processing and Development of Agro-Processing Clusters",
+      "eligibility": {"occupation": ["entrepreneur", "business", "farmerProducerOrg"], "sector": ["foodProcessing"], "businessStage": ["new", "expansion"]},
+      "benefit": "Grant-in-aid for food processing units and cold chains - up to ₹10 crore",
+      "documents": ["Aadhaar", "Business Plan", "Land Documents", "Bank Account"],
+      "applyUrl": "https://mofpi.nic.in",
+      "state": "all"
+    },
+    {
+      "id": "operation-greens",
+      "name": "Operation Greens",
+      "fullName": "Operation Greens for Tomato, Onion, Potato",
+      "eligibility": {"occupation": ["farmer", "farmerProducerOrg", "exporter"], "crops": ["tomato", "onion", "potato"]},
+      "benefit": "50% subsidy on transport, storage, processing for TOP crops",
+      "documents": ["Aadhaar", "Farmers/FPO Registration", "Storage/Transport Bills"],
+      "applyUrl": "https://mofpi.nic.in",
+      "state": "all"
+    },
+    {
+      "id": "namami-gange",
+      "name": "Namami Gange",
+      "fullName": "National Mission for Clean Ganga",
+      "eligibility": {"occupation": ["any"], "location": ["gangaBasin"], "projectType": ["sanitation", "wasteManagement", "riverFront"]},
+      "benefit": "Support for projects related to Ganga rejuvenation",
+      "documents": ["Aadhaar", "Project Proposal", "Local Body NOC"],
+      "applyUrl": "https://nmcg.nic.in",
+      "state": "all"
+    },
+    {
+      "id": "atal-tinkering",
+      "name": "ATL",
+      "fullName": "Atal Tinkering Labs",
+      "eligibility": {"institution": ["school"], "educationLevel": ["6th", "7th", "8th", "9th", "10th", "11th", "12th"], "schoolType": ["government", "private"]},
+      "benefit": "₹20 lakh grant for setting up innovation lab with 3D printer, robotics kit, electronics",
+      "documents": ["School Registration", "NITI Aayog Registration", "Infrastructure Availability"],
+      "applyUrl": "https://aim.gov.in",
+      "state": "all"
+    },
+    {
+      "id": "atal-incubation",
+      "name": "AIC",
+      "fullName": "Atal Incubation Centres",
+      "eligibility": {"institution": ["university", "college", "researchCenter", "ngo"], "infrastructure": true, "fundingCapacity": true},
+      "benefit": "Grant up to ₹10 crore for establishing startup incubation centre",
+      "documents": ["Institution Registration", "Infrastructure Proof", "Business Plan", "Financial Capability"],
+      "applyUrl": "https://aim.gov.in",
+      "state": "all"
+    },
+    {
+      "id": "unnat-bharat",
+      "name": "UBA",
+      "fullName": "Unnat Bharat Abhiyan",
+      "eligibility": {"institution": ["higherEducation"], "participation": ["villageAdoption", "ruralDevelopment"]},
+      "benefit": "Support for HEIs to work with villages on development challenges",
+      "documents": ["Institution Registration", "Village Adoption Letter", "Project Proposal"],
+      "applyUrl": "https://unnatbharatabhiyan.gov.in",
+      "state": "all"
+    },
+    {
+      "id": "smart-cities",
+      "name": "Smart Cities",
+      "fullName": "Smart Cities Mission",
+      "eligibility": {"location": ["smartCity"], "projectType": ["urbanDevelopment", "smartSolutions", "infrastructure"]},
+      "benefit": "Central funding for smart urban solutions - pan-city and area-based development",
+      "documents": ["Smart City Proposal", "SPV Registration", "DPR"],
+      "applyUrl": "https://smartcities.gov.in",
+      "state": "all"
+    },
+    {
+      "id": "amrut",
+      "name": "AMRUT",
+      "fullName": "Atal Mission for Rejuvenation and Urban Transformation",
+      "eligibility": {"location": ["amrutCity"], "projectType": ["waterSupply", "sewerage", "stormWater", "urbanTransport", "greenSpace"]},
+      "benefit": "Central assistance for urban infrastructure projects in 500 cities",
+      "documents": ["City SAP", "DPR", "State Government Approval"],
+      "applyUrl": "https://amrut.gov.in",
+      "state": "all"
+    },
+    {
+      "id": "swachh-bharat-urban",
+      "name": "SBM-Urban",
+      "fullName": "Swachh Bharat Mission Urban",
+      "eligibility": {"location": ["urban"], "projectType": ["toiletConstruction", "sewerage", "wasteManagement"]},
+      "benefit": "Central funding for urban sanitation infrastructure and behavior change",
+      "documents": ["ULB Registration", "Project DPR", "State Approval"],
+      "applyUrl": "https://swachhbharaturban.gov.in",
+      "state": "all"
+    },
+    {
+      "id": "hriday",
+      "name": "HRIDAY",
+      "fullName": "National Heritage City Development and Augmentation Yojana",
+      "eligibility": {"location": ["heritageCity"], "projectType": ["heritageConservation", "urbanImprovement"]},
+      "benefit": "Funding for heritage conservation and urban infrastructure in 12 heritage cities",
+      "documents": ["Heritage City Plan", "DPR", "State Government Approval"],
+      "applyUrl": "https://hridayindia.in",
+      "state": "all"
+    },
+    {
+      "id": "day-nulm",
+      "name": "DAY-NULM",
+      "fullName": "Deendayal Antyodaya Yojana - National Urban Livelihoods Mission",
+      "eligibility": {"occupation": ["urbanPoor", "streetVendor", "selfEmployed"], "location": ["urban"]},
+      "benefit": "Skill training, self-employment loans, shelter, street vendor support in urban areas",
+      "documents": ["Aadhaar", "BPL Card/EWS Certificate", "Bank Account"],
+      "applyUrl": "https://nulm.gov.in",
+      "state": "all"
+    },
+    {
+      "id": "nhm",
+      "name": "NHM",
+      "fullName": "National Health Mission",
+      "eligibility": {"occupation": ["any"], "location": ["rural", "urban"], "healthcareNeed": true},
+      "benefit": "Universal access to equitable, affordable healthcare including maternal and child health",
+      "documents": ["Aadhaar", "BPL Card (for free services)", "Jan Aadhaar/State Card"],
+      "applyUrl": "https://nhm.gov.in",
+      "state": "all"
+    },
+    {
+      "id": "rbsk",
+      "name": "RBSK",
+      "fullName": "Rashtriya Bal Swasthya Karyakram",
+      "eligibility": {"age": "0-18", "healthScreening": true},
+      "benefit": "Free health screening and treatment for 32 diseases in children up to 18 years",
+      "documents": ["Birth Certificate", "Aadhaar (if available)", "Parent ID"],
+      "applyUrl": "https://nhm.gov.in",
+      "state": "all"
+    },
+    {
+      "id": "rksk",
+      "name": "RKSK",
+      "fullName": "Rashtriya Kishor Swasthya Karyakram",
+      "eligibility": {"age": "10-19", "adolescentHealth": true},
+      "benefit": "Health services for adolescents including nutrition, counseling, reproductive health",
+      "documents": ["Age Proof", "School/Residence Proof"],
+      "applyUrl": "https://nhm.gov.in",
+      "state": "all"
+    },
+    {
+      "id": "janani-suraksha",
+      "name": "JSY",
+      "fullName": "Janani Suraksha Yojana",
+      "eligibility": {"gender": ["female"], "pregnancy": true, "economicCategory": ["bpl", "scheduledCaste", "scheduledTribe"]},
+      "benefit": "Cash assistance for institutional delivery - ₹1,400-1,500 (rural), ₹1,000 (urban)",
+      "documents": ["Aadhaar", "BPL Card", "MCP Card", "Bank Account"],
+      "applyUrl": "https://nhm.gov.in",
+      "state": "all"
+    },
+    {
+      "id": "janani-shishu",
+      "name": "JSSK",
+      "fullName": "Janani Shishu Suraksha Karyakram",
+      "eligibility": {"gender": ["female"], "pregnancy": true, "childAge": "upTo1Year"},
+      "benefit": "Free entitlements for pregnant women and sick newborns - drugs, diagnostics, diet, transport",
+      "documents": ["Aadhaar", "MCP Card", "JSY Registration"],
+      "applyUrl": "https://nhm.gov.in",
+      "state": "all"
+    },
+    {
+      "id": "ayushman-bharat-hwc",
+      "name": "AB-HWC",
+      "fullName": "Ayushman Bharat Health and Wellness Centres",
+      "eligibility": {"occupation": ["any"], "location": ["subCentre", "phc", "uphc"]},
+      "benefit": "Comprehensive primary healthcare including free essential drugs and diagnostics",
+      "documents": ["Aadhaar", "Ration Card/BPL Card", "State Health Card"],
+      "applyUrl": "https://ab-hwc.nhp.gov.in",
+      "state": "all"
+    },
+    {
+      "id": "national-digital-health",
+      "name": "NDHM",
+      "fullName": "National Digital Health Mission",
+      "eligibility": {"occupation": ["any"], "hasAadhaar": true},
+      "benefit": "Digital Health ID for storing and sharing health records electronically",
+      "documents": ["Aadhaar", "Mobile Number"],
+      "applyUrl": "https://healthid.ndhm.gov.in",
+      "state": "all"
+    },
+    {
+      "id": "tb-free-india",
+      "name": "Ni-kshay",
+      "fullName": "TB Free India Campaign",
+      "eligibility": {"occupation": ["any"], "tbDiagnosis": true},
+      "benefit": "Free TB diagnosis, treatment, nutritional support (₹500/month), and incentives",
+      "documents": ["Aadhaar", "TB Diagnosis Report", "Bank Account"],
+      "applyUrl": "https://nikshay.in",
+      "state": "all"
     }
   ]
 }
