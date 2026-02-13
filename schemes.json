@@ -859,6 +859,236 @@
       "documents": ["Aadhaar", "Project Report", "UK Domicile", "Bank Account"],
       "applyUrl": "https://uk.gov.in",
       "state": "uttarakhand"
+    },
+    {
+      "id": "pm-vaya-vandana",
+      "name": "PMVVY",
+      "fullName": "Pradhan Mantri Vaya Vandana Yojana",
+      "eligibility": {"occupation": ["any"], "minAge": 60, "maxInvestment": 1500000, "hasAadhaar": true},
+      "benefit": "Pension scheme 7.4% interest for senior citizens, pension ₹1,000-9,250/month",
+      "documents": ["Aadhaar", "PAN", "Age Proof", "Bank Account"],
+      "applyUrl": "https://licindia.in",
+      "state": "all"
+    },
+    {
+      "id": "sc-st-hub",
+      "name": "SC/ST Hub",
+      "fullName": "National SC/ST Hub Scheme",
+      "eligibility": {"category": ["sc", "st"], "occupation": ["business", "entrepreneur", "msme"], "businessStage": ["new", "existing"]},
+      "benefit": "Support for capacity building, market linkage, credit support, mentorship",
+      "documents": ["Aadhaar", "Caste Certificate", "Business Registration", "Bank Account"],
+      "applyUrl": "https://scsthub.msme.gov.in",
+      "state": "all"
+    },
+    {
+      "id": "zero-defect",
+      "name": "ZED Certification",
+      "fullName": "Zero Defect Zero Effect Scheme",
+      "eligibility": {"occupation": ["business", "msme", "manufacturer"], "businessStage": ["existing"]},
+      "benefit": "Certification support + subsidy for quality improvement, market access",
+      "documents": ["Aadhaar", "Udyam Registration", "Bank Account"],
+      "applyUrl": "https://zed.msme.gov.in",
+      "state": "all"
+    },
+    {
+      "id": "employment-generation",
+      "name": "PMEGP",
+      "fullName": "Prime Minister's Employment Generation Programme",
+      "eligibility": {"occupation": ["entrepreneur", "business"], "minAge": 18, "education": ["8th", "10th", "12th", "graduate"], "businessStage": ["new"]},
+      "benefit": "Loan up to ₹25 lakh, subsidy 15-35% for manufacturing/service units",
+      "documents": ["Aadhaar", "Education Certificate", "Project Report", "Bank Account"],
+      "applyUrl": "https://www.kviconline.gov.in",
+      "state": "all"
+    },
+    {
+      "id": "pm-ebus",
+      "name": "PM-eBus Sewa",
+      "fullName": "PM Electric Bus Sewa Scheme",
+      "eligibility": {"occupation": ["any"], "location": "urban", "cityTier": ["1", "2", "3"]},
+      "benefit": "10,000 electric buses in 169 cities, affordable public transport",
+      "documents": ["Aadhaar", "City Residence Proof"],
+      "applyUrl": "State Transport Departments",
+      "state": "all"
+    },
+    {
+      "id": "pm-shri",
+      "name": "PM-SHRI",
+      "fullName": "PM Schools for Rising India",
+      "eligibility": {"occupation": ["any"], "education": ["school"], "schoolCategory": ["government", "aided"]},
+      "benefit": "Modern infrastructure, labs, smart classrooms in 14,500 schools",
+      "documents": ["School Registration", "Student ID"],
+      "applyUrl": "https://pmscholarships.gov.in",
+      "state": "all"
+    },
+    {
+      "id": "national-overseas",
+      "name": "National Overseas Scholarship",
+      "fullName": "National Overseas Scholarship for SC/ST Students",
+      "eligibility": {"category": ["sc", "st", "denotified"], "education": ["masters", "phd"], "maxAge": 35, "minExperience": 2},
+      "benefit": "Full financial support for higher studies abroad (tuition + living + travel)",
+      "documents": ["Aadhaar", "Caste Certificate", "Degree Certificates", "Admission Letter", "Passport"],
+      "applyUrl": "https://scholarships.gov.in",
+      "state": "all"
+    },
+    {
+      "id": "free-coaching",
+      "name": "Free Coaching Scheme",
+      "fullName": "Free Coaching Scheme for SC/ST/OBC Students",
+      "eligibility": {"category": ["sc", "st", "obc", "minority"], "education": ["12th", "graduate"], "preparingFor": ["ias", "ips", "ssc", "bank", "railway", "neet", "jee"]},
+      "benefit": "Free coaching for competitive exams + stipend ₹6,000-10,000/month",
+      "documents": ["Aadhaar", "Caste Certificate", "Education Certificate", "Income Certificate"],
+      "applyUrl": "https://scholarships.gov.in",
+      "state": "all"
+    },
+    {
+      "id": "pre-matric-disabled",
+      "name": "Pre-Matric Scholarship (Disabled)",
+      "fullName": "Pre-Matric Scholarship for Students with Disabilities",
+      "eligibility": {"disability": true, "minDisabilityPercent": 40, "education": ["1st", "2nd", "3rd", "4th", "5th", "6th", "7th", "8th", "9th", "10th"]},
+      "benefit": "Scholarship ₹500-1,000/month + allowances for books, transport",
+      "documents": ["Aadhaar", "Disability Certificate", "School Certificate", "Income Certificate"],
+      "applyUrl": "https://scholarships.gov.in",
+      "state": "all"
+    },
+    {
+      "id": "post-matric-disabled",
+      "name": "Post-Matric Scholarship (Disabled)",
+      "fullName": "Post-Matric Scholarship for Students with Disabilities",
+      "eligibility": {"disability": true, "minDisabilityPercent": 40, "education": ["11th", "12th", "undergraduate", "postgraduate"]},
+      "benefit": "Full fee reimbursement + maintenance allowance ₹1,600-2,000/month",
+      "documents": ["Aadhaar", "Disability Certificate", "College Certificate", "Fee Receipt"],
+      "applyUrl": "https://scholarships.gov.in",
+      "state": "all"
+    },
+    {
+      "id": "divyangjan-skill",
+      "name": "Skill Training (Divyangjan)",
+      "fullName": "Skill Training for Persons with Disabilities",
+      "eligibility": {"disability": true, "minAge": 15, "maxAge": 45, "lookingFor": ["skillTraining", "employment"]},
+      "benefit": "Free skill training + stipend ₹750-1,500/month + placement assistance",
+      "documents": ["Aadhaar", "Disability Certificate", "Education Certificate"],
+      "applyUrl": "https://www.nhfdc.nic.in",
+      "state": "all"
+    },
+    {
+      "id": "national-fellowship-minority",
+      "name": "Maulana Azad Fellowship",
+      "fullName": "Maulana Azad National Fellowship for Minority Students",
+      "eligibility": {"category": ["muslim", "christian", "sikh", "buddhist", "parsi", "jain"], "education": ["mPhil", "phd"], "minMarks": 50},
+      "benefit": "Fellowship ₹25,000-28,000/month + contingency grant ₹10,000-20,500/year",
+      "documents": ["Aadhaar", "Minority Certificate", "University Enrollment", "Previous Marksheets"],
+      "applyUrl": "https://scholarships.gov.in",
+      "state": "all"
+    },
+    {
+      "id": "minority-pre-matric",
+      "name": "Pre-Matric (Minority)",
+      "fullName": "Pre-Matric Scholarship for Minorities",
+      "eligibility": {"category": ["muslim", "christian", "sikh", "buddhist", "parsi", "jain"], "education": ["1st", "2nd", "3rd", "4th", "5th", "6th", "7th", "8th", "9th", "10th"], "maxFamilyIncome": 100000},
+      "benefit": "Admission fee, tuition fee reimbursement + maintenance allowance",
+      "documents": ["Aadhaar", "Minority Certificate", "School Certificate", "Income Certificate"],
+      "applyUrl": "https://scholarships.gov.in",
+      "state": "all"
+    },
+    {
+      "id": "minority-post-matric",
+      "name": "Post-Matric (Minority)",
+      "fullName": "Post-Matric Scholarship for Minorities",
+      "eligibility": {"category": ["muslim", "christian", "sikh", "buddhist", "parsi", "jain"], "education": ["11th", "12th", "undergraduate", "postgraduate"], "maxFamilyIncome": 200000},
+      "benefit": "Full fee reimbursement + maintenance allowance ₹235-550/month (hostellers get more)",
+      "documents": ["Aadhaar", "Minority Certificate", "College Certificate", "Fee Receipt", "Income Certificate"],
+      "applyUrl": "https://scholarships.gov.in",
+      "state": "all"
+    },
+    {
+      "id": "begum-hazrat",
+      "name": "Begum Hazrat Mahal",
+      "fullName": "Begum Hazrat Mahal National Scholarship for Girls",
+      "eligibility": {"gender": ["female"], "category": ["minority"], "education": ["9th", "10th", "11th", "12th"], "maxFamilyIncome": 200000},
+      "benefit": "Scholarship ₹5,000-6,000/year for minority girl students",
+      "documents": ["Aadhaar", "Minority Certificate", "School Certificate", "Income Certificate", "Bank Account"],
+      "applyUrl": "https://scholarships.gov.in",
+      "state": "all"
+    },
+    {
+      "id": "nmdfc-loan",
+      "name": "NMDFC Loan",
+      "fullName": "National Minorities Development Finance Corporation Loan",
+      "eligibility": {"category": ["minority"], "occupation": ["business", "entrepreneur", "selfEmployed"], "maxFamilyIncome": 981000, "businessStage": ["new", "existing"]},
+      "benefit": "Loan up to ₹30 lakh for business at 5-6% interest",
+      "documents": ["Aadhaar", "Minority Certificate", "Income Certificate", "Business Plan", "Bank Account"],
+      "applyUrl": "https://www.nmdfc.org",
+      "state": "all"
+    },
+    {
+      "id": "pm-welfare-minority",
+      "name": "PM Welfare (Minority)",
+      "fullName": "Pradhan Mantri Jan Vikas Karyakram for Minorities",
+      "eligibility": {"category": ["minority"], "occupation": ["any"], "location": "minorityConcentratedDistrict"},
+      "benefit": "Skill training, education, health, infrastructure development in minority areas",
+      "documents": ["Aadhaar", "Minority Certificate", "Residence Proof"],
+      "applyUrl": "https://www.maefc.gov.in",
+      "state": "all"
+    },
+    {
+      "id": "maharashtra-anna-purna",
+      "name": "Anna Poorna Yojana",
+      "fullName": "Maharashtra Annapurna Yojana",
+      "eligibility": {"state": "maharashtra", "gender": ["female"], "occupation": ["any"], "economicCategory": ["bpl", "economicallyWeaker"], "headOfFamily": true},
+      "benefit": "Free gas stove + 3 free gas cylinders per year",
+      "documents": ["Aadhaar", "Ration Card", "BPL Certificate", "Bank Account"],
+      "applyUrl": "https://aaplesarkar.mahaonline.gov.in",
+      "state": "maharashtra"
+    },
+    {
+      "id": "maharashtra-sheep-goat",
+      "name": "Magel Tyala Sheli-Mehni",
+      "fullName": "Maharashtra Sheep-Goat Farming Scheme",
+      "eligibility": {"state": "maharashtra", "occupation": ["farmer", "livestock"], "activity": ["sheepFarming", "goatFarming"]},
+      "benefit": "Subsidy up to 50% for sheep/goat purchase and shelter construction",
+      "documents": ["Aadhaar", "Land Records", "Bank Account", "Maharashtra Residence"],
+      "applyUrl": "https://mahadbtmahait.gov.in",
+      "state": "maharashtra"
+    },
+    {
+      "id": "tamilnadu-pension",
+      "name": "Old Age Pension",
+      "fullName": "Tamil Nadu Old Age Pension Scheme",
+      "eligibility": {"state": "tamilNadu", "occupation": ["any"], "minAge": 60, "economicCategory": ["bpl", "economicallyWeaker"]},
+      "benefit": "₹1,000/month pension for senior citizens (₹1,500 for 80+)",
+      "documents": ["Aadhaar", "Age Proof", "Income Certificate", "Bank Account", "TN Residence"],
+      "applyUrl": "https://www.tn.gov.in",
+      "state": "tamilNadu"
+    },
+    {
+      "id": "tamilnadu-marriage",
+      "name": "Moovalur Ramamirtham",
+      "fullName": "Moovalur Ramamirtham Ammaiyar Memorial Marriage Assistance",
+      "eligibility": {"state": "tamilNadu", "gender": ["female"], "education": ["10th", "12th"], "economicCategory": ["bpl", "economicallyWeaker"]},
+      "benefit": "₹50,000 financial assistance for daughter's marriage + 8g gold coin",
+      "documents": ["Aadhaar", "10th/12th Certificate", "Income Certificate", "Bank Account"],
+      "applyUrl": "https://www.tn.gov.in",
+      "state": "tamilNadu"
+    },
+    {
+      "id": "gujarat-gas-subsidy",
+      "name": "Gujarat Gas Subsidy",
+      "fullName": "Gujarat LPG Cylinder Subsidy Scheme",
+      "eligibility": {"state": "gujarat", "occupation": ["any"], "economicCategory": ["bpl", "economicallyWeaker", "antyodaya"]},
+      "benefit": "LPG cylinder at ₹500 (subsidy covers rest)",
+      "documents": ["Aadhaar", "BPL Card", "Bank Account", "Gujarat Residence"],
+      "applyUrl": "https://gujarat.gov.in",
+      "state": "gujarat"
+    },
+    {
+      "id": "gujarat-sujalam",
+      "name": "Sujalam Sufalam",
+      "fullName": "Gujarat Sujalam Sufalam Jal Sanchay Abhiyan",
+      "eligibility": {"state": "gujarat", "occupation": ["farmer", "agriculture"], "activity": ["waterConservation", "checkDam", "farmPond"]},
+      "benefit": "Financial assistance for water conservation structures on farm",
+      "documents": ["Aadhaar", "Land Records", "Bank Account", "Gujarat Residence"],
+      "applyUrl": "https://gujarat.gov.in",
+      "state": "gujarat"
     }
   ]
 }
